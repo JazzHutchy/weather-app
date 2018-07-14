@@ -1,16 +1,24 @@
 const express = require("express")
 const app = express()
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // Allow access to 'Public' folder with CSS file (express doesn't allow this by default)
 app.use(express.static('public'));
 // Setup template engine for EJS
 app.set('view engine', 'ejs')
 
 
-// Render the 'index' Embedded JS file
+// GET: Render the 'index' Embedded JS file
 app.get('/', function (req, res) {
-  // NEW CODE
   res.render('index');
+})
+
+// POST
+app.post('/', function (req, res) {
+  res.render('index');
+  console.log(req.body.city);
 })
 
 // Server location
