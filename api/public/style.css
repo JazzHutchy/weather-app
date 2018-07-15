@@ -8,11 +8,12 @@ body {
   width: 800px;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
-  background-color:rgb(28, 43, 155);
+  background: linear-gradient(rgb(0, 0, 174),rgb(180, 180, 255)) no-repeat;
 }
 .container {
   width: 600px;
   margin: 0 auto;
+  padding: 150px 0px 400px 0px;
 }
 fieldset {
   display: block;
@@ -57,7 +58,7 @@ fieldset {
   border-bottom:1px solid #ddd;
 }
 .ghost-button {
-  background-color: rgb(124, 222, 255);
+  background-color: rgb(0, 191, 255);
   border:2px solid #ddd;
   padding:10px 30px;
   width: 100%;
