@@ -39,7 +39,7 @@ app.post('/', function (req, res) {
     }
 
   }
-  })
+  )
 })
 
 // Server location
