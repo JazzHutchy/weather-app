@@ -1,21 +1,21 @@
-const express = require("express")
-const app = express()
-const request = require('request')
-const apiKey = 'fc4f37e342d0b48ec13980acef77fa3c'
-
-// Body Parser Middleware
+const express = require('express')
 const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
+const request = require('request')
+const app = express()
+
+const apiKey = 'fc4f37e342d0b48ec13980acef77fa3c'
 
 // Allow access to 'Public' folder with CSS file (express doesn't allow this by default)
 app.use(express.static('public'));
+// Enable Body Parser
+app.use(bodyParser.urlencoded({ extended: true }));
 // Setup template engine for EJS
 app.set('view engine', 'ejs')
 
 
 // GET: Render the 'index' Embedded JS file
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', { weather: null, error: null });
 })
 
 // POST
