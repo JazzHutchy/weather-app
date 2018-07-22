@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const request = require('request')
 const app = express()
 
-const apiKey = 'fc4f37e342d0b48ec13980acef77fa3c'
+const apiKey = '******************'
 
 // Allow access to 'Public' folder with CSS file (express doesn't allow this by default)
 app.use(express.static('public'));
